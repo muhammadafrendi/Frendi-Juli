@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    background: linear-gradient(
+        135deg, #ff9aaf, #e8a5ff, #ffccd5
+    );
+}
+
+/* Background romantis */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(
+        circle, transparent, rgba(100, 20, 80, 0.25)
+    );
+    pointer-events: none;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: 950px;
+    margin: auto;
+    padding: 45px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(32px, 6vw, 58px);
+    margin-bottom: 15px;
+    text-shadow: 0 0 20px #ff4f91;
+    animation: glow 2s infinite alternate;
+}
+
+.subtitle {
+    font-size: 17px;
+    line-height: 1.8;
+    margin: 0 auto 35px;
+}
+
+.heart {
+    display: inline-block;
+    color: #ff1744;
+    animation: heartbeat 1s infinite;
+}
+
+/* Galeri foto */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+    margin: 35px 0;
+}
+
+.photo {
+    width: 190px;
+    padding: 10px 10px 18px;
+    background: rgba(255,255,255,0.92);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px #8d286955;
+    transform: rotate(-4deg);
+    animation: float 3s ease-in-out infinite;
+    transition: 0.4s;
+}
+
+.photo:nth-child(2) {
+    transform: rotate(5deg);
+    animation-delay: .5s;
+}
+
+.photo:nth-child(3) {
+    transform: rotate(-3deg);
+    animation-delay: 1s;
+}
+
+.photo:nth-child(4) {
+    transform: rotate(4deg);
+    animation-delay: 1.5s;
+}
+
+.photo:hover {
+    transform: scale(1.1) rotate(0deg);
+    z-index: 5;
+}
+
+.photo img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.caption {
+    color: #d63384;
+    font-family: cursive;
+    font-size: 17px;
+    margin-top: 12px;
+}
+
+/* Surat cinta */
+.love-card {
+    max-width: 650px;
+    margin: 35px auto;
+    padding: 28px;
+    color: #8c2454;
+    background: rgba(255,255,255,0.86);
+    border-radius: 25px;
+    box-shadow: 0 10px 35px #a42b6b33;
+    line-height: 1.9;
+    animation: appear 2s ease;
+}
+
+.love-card h2 {
+    color: #ed4b91;
+    margin-bottom: 15px;
+}
+
+/* Tombol */
+button {
+    border: none;
+    padding: 14px 28px;
+    margin: 10px;
+    border-radius: 30px;
+    background: #ff3e83;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px #ff3e8377;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    background: #e91e63;
+}
+
+/* Hati melayang */
+.floating-heart {
+    position: fixed;
+    bottom: -30px;
+    z-index: 1;
+    color: #fff;
+    pointer-events: none;
+    animation: rise linear forwards;
+}
+
+footer {
+    margin-top: 35px;
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+
+/* Animasi CSS */
+@keyframes float {
+    0%, 100% { translate: 0 0; }
+    50% { translate: 0 -15px; }
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 8px #ff4f91; }
+    to { text-shadow: 0 0 25px #fff, 0 0 35px #ff4f91; }
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rise {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .photo {
+        width: 42%;
+        padding: 7px 7px 12px;
+    }
+
+    .photo img {
+        height: 155px;
+    }
+
+    .gallery {
+        gap: 15px;
+    }
+
+    .love-card {
+        padding: 22px 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>For My Love <span class="heart">❤️</span></h1>
+
+    <p class="subtitle">
+        Hai sayangkuuu 🥹💕<br>
+        Aku punya sesuatu yang spesial buat kamu...
+    </p>
+
+    <div class="gallery">
+
+        <!-- GANTI NAMA FOTO SESUAI FOTO KAMU -->
+        <div class="photo">
+            <img src="Fren1.jpeg" alt="Kenangan kita">
+            <div class="caption">My Favorite ❤️</div>
+        </div>
+
+        <div class="photo">
+            <img src="Fren2.jpeg" alt="Momen indah">
+            <div class="caption">My Happiness 💗</div>
+        </div>
+
+        <div class="photo">
+            <img src="Fren3.jpeg" alt="Foto kenangan">
+            <div class="caption">My Home 🏡</div>
+        </div>
+
+        <div class="photo">
+            <img src="Fren4.jpeg" alt="Foto kesayangan">
+            <div class="caption">My Everything 💕</div>
+        </div>
+
+    </div>
+
+    <div class="love-card">
+        <h2>💌 Surat Kecil Untukmu</h2>
+
+        <p>
+            Sayang, terima kasih sudah hadir dalam hidupku.
+            Kamu adalah salah satu alasan aku tersenyum
+            setiap hari. Aku mungkin nggak selalu sempurna,
+            tapi aku akan terus belajar menjadi seseorang
+            yang bisa membuatmu bahagia.
+        </p>
+
+        <p>
+            Dari sekian banyak orang,
+            aku bersyukur bisa mengenal kamu.
+            Semoga kita selalu punya alasan untuk bertahan,
+            saling memahami, dan tumbuh bersama.
+        </p>
+
+        <h3 style="margin-top:20px">
+            I Love You So Much! 💖
+        </h3>
+    </div>
+
+    <button onclick="showLove()">
+        Klik Kalau Sayang Aku 💗
+    </button>
+
+    <p id="message" style="margin-top:20px; font-size:20px;"></p>
+
+    <footer>
+        Dibuat dengan sepenuh hati ❤️<br>
+        I Love You Sayang ♡
+    </footer>
+
+</div>
+
+<script>
+function showLove() {
+    document.getElementById("message").innerHTML =
+        "Awww! Aku juga sayang kamu banyak-banyak! 🥹💖💋";
+
+    // Efek hati berterbangan
+    for (let i = 0; i < 25; i++) {
+        const heart = document.createElement("div");
+
+        heart.className = "floating-heart";
+        heart.innerHTML = ["❤️", "💗", "💕", "💖", "💘"][
+            Math.floor(Math.random() * 5)
+        ];
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (18 + Math.random() * 25) + "px";
+        heart.style.animationDuration = (3 + Math.random() * 4) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 7500);
+    }
+}
+
+// Hati kecil yang muncul otomatis
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.className = "floating-heart";
+    heart.innerHTML = "💗";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = "20px";
+    heart.style.animationDuration = "6s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 6000);
+}, 700);
+</script>
+
+</body>
+</html>
